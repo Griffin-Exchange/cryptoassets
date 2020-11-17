@@ -15,6 +15,18 @@ export default {
     isValidAddress: (address) => !!validateBitcoinAddress(address),
     formatAddress: address => address
   },
+  QUO: {
+    name: 'Quorum',
+    type: 'network',
+    code: 'QUO',
+    color: '#617cca',
+    decimals: 18,
+    fees: {
+      unit: 'gwei'
+    },
+    isValidAddress: ethUtil.isValidAddress,
+    formatAddress: ethUtil.toChecksumAddress
+  },
   ETH: {
     name: 'Ether',
     type: 'network',
